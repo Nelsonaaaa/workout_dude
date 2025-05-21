@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>宇宙最强肌肉男 · 苏浩楠荣耀报名！</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* 自定义滚动动画 */
+        .marquee-container {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            background-color: rgba(0,0,0,0.5);
+            padding: 1rem 0;
+        }
+
+        .marquee-content {
+            display: flex;
+            width: max-content;
+            animation: marquee 30s linear infinite;
+        }
+
+        .marquee-content:hover {
+            animation-play-state: paused;
+        }
+
+        .competitor-card {
+            flex-shrink: 0;
+            width: 150px;
+            margin: 0 15px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .competitor-card:hover {
+            transform: scale(1.1);
+        }
+
+        .competitor-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #facc15;
+            margin-bottom: 0.5rem;
+            box-shadow: 0 4px 15px rgba(250, 204, 21, 0.5);
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
+        }
+
+        body {
+            background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+        }
+
+        .metal-button {
+            background: linear-gradient(145deg, #4a5568, #2d3748);
+            border: 1px solid #718096;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.3),
+                        inset 0 1px 1px rgba(255,255,255,0.2),
+                        inset 0 -1px 1px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+        }
+        .metal-button:hover {
+            background: linear-gradient(145deg, #5a6578, #3d4758);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.4),
+                        inset 0 1px 2px rgba(255,255,255,0.3),
+                        inset 0 -1px 2px rgba(0,0,0,0.3),
+                        0 0 15px rgba(250, 204, 21, 0.5);
+        }
+        .metal-button:active {
+            transform: translateY(1px);
+            box-shadow: 0 1px 2px rgba(0,0,0,0.2),
+                        inset 0 1px 1px rgba(255,255,255,0.1),
+                        inset 0 -1px 1px rgba(0,0,0,0.1);
+        }
+
+        /* Style for Su Haonan's photo for smooth transition */
+        #suhaonan-photo {
+            transition: opacity 0.5s ease-in-out; /* For smooth fade */
+        }
+
+    </style>
+</head>
+<body class="text-gray-100 min-h-screen flex flex-col items-center justify-center p-4 selection:bg-yellow-500 selection:text-black">
+
+    <header class="text-center mb-10">
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight">
+            <span class="block text-yellow-400 animate-pulse">宇宙无敌肌肉王争霸赛</span>
+            <span class="block text-xl sm:text-2xl text-gray-300 mt-2">—— 2077 终极对决 ——</span>
+        </h1>
+    </header>
+
+    <main class="w-full max-w-4xl bg-gray-800 bg-opacity-80 backdrop-blur-md shadow-2xl rounded-xl p-6 md:p-10 border border-gray-700">
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+            <!-- 左侧：苏浩楠照片和信息 -->
+            <div class="flex flex-col items-center">
+                <!-- The src will be set by JavaScript -->
+                <img id="suhaonan-photo" src="" alt="苏浩楠" class="w-60 h-80 md:w-72 md:h-96 object-cover rounded-lg shadow-lg border-4 border-yellow-500 transform hover:scale-105 transition-transform duration-300">
+                <p class="mt-4 text-xl font-semibold text-yellow-300">参赛选手：苏浩楠</p>
+                <p class="text-sm text-gray-400">"我不是来搞笑的，我是来创造奇迹的！"</p>
+            </div>
+
+            <!-- 右侧：报名表单 -->
+            <form id="registration-form" class="space-y-6">
+                <div>
+                    <label for="name" class="block text-sm font-medium text-gray-300">选手姓名</label>
+                    <input type="text" name="name" id="name" value="苏浩楠" readonly
+                           class="mt-1 block w-full bg-gray-700 border-gray-600 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-yellow-500 focus:border-yellow-500 text-white sm:text-sm">
+                </div>
+                <div>
+                    <label for="motto" class="block text-sm font-medium text-gray-300">参赛宣言</label>
+                    <textarea name="motto" id="motto" rows="3"
+                              class="mt-1 block w-full bg-gray-700 border-gray-600 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-yellow-500 focus:border-yellow-500 text-white sm:text-sm placeholder-gray-500"
+                              placeholder="例如：我的目标是星辰大海...和一块腹肌！"></textarea>
+                </div>
+                <div>
+                    <label for="specialty" class="block text-sm font-medium text-gray-300">最强肌肉群</label>
+                    <input type="text" name="specialty" id="specialty"
+                           class="mt-1 block w-full bg-gray-700 border-gray-600 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-yellow-500 focus:border-yellow-500 text-white sm:text-sm placeholder-gray-500"
+                           placeholder="例如：面部表情肌">
+                </div>
+                <div>
+                    <label for="weight" class="block text-sm font-medium text-gray-300">目标参赛体重 (kg)</label>
+                    <input type="number" name="weight" id="weight"
+                           class="mt-1 block w-full bg-gray-700 border-gray-600 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-yellow-500 focus:border-yellow-500 text-white sm:text-sm placeholder-gray-500"
+                           placeholder="例如：50 (希望是肌肉)">
+                </div>
+                <button type="submit"
+                        class="w-full metal-button text-yellow-300 font-bold py-3 px-4 rounded-md text-lg hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-yellow-500">
+                    为苏浩楠荣耀报名！
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <section class="w-full mt-12">
+        <h2 class="text-2xl sm:text-3xl font-bold text-center text-yellow-400 mb-6">
+            已报名传奇选手 - 苏浩楠的强劲对手们！
+        </h2>
+        <div class="marquee-container">
+            <div class="marquee-content" id="competitors-marquee">
+                <!-- 竞争对手卡片将会通过JS动态添加两次以实现无缝滚动 -->
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center text-gray-500 mt-12 pb-8">
+        <p>© 2077 宇宙最强肌肉男组委会 - 苏浩楠粉丝后援会荣誉出品</p>
+        <p>特别鸣谢：各位肌肉巨佬的“友情客串”</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // --- START: 苏浩楠照片轮播 ---
+            const suHaonanImageElement = document.getElementById('suhaonan-photo');
+            const suHaonanPhotos = [
+                '../img/01.jpg?text=苏浩楠+造型1', // 替换成苏浩楠的照片1
+                '../img/02.jpg?text=苏浩楠+造型2', 
+                '../img/03.jpg?text=苏浩楠+造型3', // 替换成苏浩楠的照片1
+                '../img/04.jpg?text=苏浩楠+造型4', 
+                // 你可以添加更多照片路径
+            ];
+            let currentSuHaonanPhotoIndex = 0;
+            const photoChangeIntervalMs = 3000; // 每3秒换一张照片
+
+            function changeSuHaonanPhoto() {
+                if (!suHaonanImageElement || suHaonanPhotos.length === 0) return;
+
+                currentSuHaonanPhotoIndex = (currentSuHaonanPhotoIndex + 1) % suHaonanPhotos.length;
+                
+                // Fade out
+                suHaonanImageElement.style.opacity = 0;
+
+                // After fade out animation (0.5s), change src and fade in
+                setTimeout(() => {
+                    suHaonanImageElement.src = suHaonanPhotos[currentSuHaonanPhotoIndex];
+                    suHaonanImageElement.style.opacity = 1;
+                }, 500); // Must match the CSS transition duration for opacity
+            }
+
+            // Set initial photo
+            if (suHaonanImageElement && suHaonanPhotos.length > 0) {
+                suHaonanImageElement.src = suHaonanPhotos[0];
+                suHaonanImageElement.style.opacity = 1; // Ensure it's visible initially
+                // Start slideshow only if there's more than one photo
+                if (suHaonanPhotos.length > 1) {
+                    setInterval(changeSuHaonanPhoto, photoChangeIntervalMs);
+                }
+            }
+            // --- END: 苏浩楠照片轮播 ---
+
+
+            const competitors = [
+                { name: '彭于晏', img: 'https://img2.baidu.com/it/u=318661164,1242711960&fm=253&fmt=auto&app=120&f=JPEG?w=500&h=889' },
+                { name: '阿诺·施瓦辛格', img: 'https://img2.baidu.com/it/u=3824643498,1818735788&fm=253&fmt=auto?w=608&h=886' },
+                { name: '道恩·强森 (巨石)', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Dwayne_Johnson_2%2C_2013.jpg/800px-Dwayne_Johnson_2%2C_2013.jpg' },
+                { name: '克里斯·海姆斯沃斯 (雷神)', img: 'https://img2.baidu.com/it/u=490158620,1563342730&fm=253&fmt=auto&app=120&f=JPEG?w=660&h=429'},
+                { name: '苏浩楠养的狗', img: 'https://pic.rmb.bdstatic.com/bjh/events/850470e49666b0bfc6cf16f809769e9c4127.png@h_1280' },
+            ];
+
+            const marqueeContent = document.getElementById('competitors-marquee');
+            const allCompetitors = [...competitors, ...competitors];
+
+            allCompetitors.forEach(competitor => {
+                const card = document.createElement('div');
+                card.className = 'competitor-card';
+                card.innerHTML = `
+                    <img src="${competitor.img}" alt="${competitor.name}">
+                    <p class="text-white font-medium">${competitor.name}</p>
+                `;
+                marqueeContent.appendChild(card);
+            });
+
+            const form = document.getElementById('registration-form');
+            form.addEventListener('submit', function(event) {
+                event.preventDefault();
+                const motto = document.getElementById('motto').value || "重在参与！";
+                const specialty = document.getElementById('specialty').value || "迷之自信";
+                const weight = document.getElementById('weight').value || "保密";
+
+                alert(`苏浩楠选手，报名信息确认！\n参赛宣言: ${motto}\n最强肌肉群: ${specialty}\n目标体重: ${weight}kg\n\n祝您...好运！对手们已经瑟瑟发抖了 (大概吧)！`);
+            });
+        });
+    </script>
+</body>
+</html>
